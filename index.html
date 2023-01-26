@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<title>Puissance3</title>
+<script src="js.js"> </script>
+<style>
+
+
+html{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+body{
+    background-image: url(pic.jpg);
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    }
+
+.intro{
+    display: flex;
+    padding: 80px;
+    margin: 20px auto;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)) 50% 50%/calc(100% - 60px) calc(100% - 60px) no-repeat,
+                linear-gradient(300deg, #363275 0%, #bcf4b0 100%);
+    border-radius: 23px;
+    padding: 57px;
+    border-radius: 20px;
+    padding: 43px;
+    box-sizing: border-box;
+    height: 80vh;
+    width: 40vw;
+    align-items: center;
+    }
+
+
+.gameName{
+    font-size: 70px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-shadow: 0px 5px 8px rgba(42, 95, 105, 0.87);
+    }
+
+@media only screen and (max-width: 1300px) {
+        .gameName {
+            font-size: 40px;
+        }
+    }
+    @media only screen and (max-width: 1100px) {
+        .gameName {
+            font-size: 30px;
+        }
+    }
+.gameName2{
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+    text-shadow: 0px 5px 8px rgb(99 170 184 / 87%);
+
+}
+
+input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(148,187,233,1) 100%);
+    border-style: none;
+    -webkit-box-shadow: 40px 24px 73px 11px rgba(103,146,219,1);
+    -moz-box-shadow: 40px 24px 73px 11px rgba(103,146,219,1);
+    box-shadow: 40px 24px 73px 11px rgba(103,146,219,1);
+    border-radius: 10px;
+}
+
+
+  
+
+  
+    
+.button{
+background-color: #fff;
+border-radius: 24px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+color: #3c4043;
+fill: currentcolor;
+font-family: "Google Sans",Roboto,Arial,sans-serif;
+font-size: 30px;
+font-weight: 500;
+justify-content: center;
+letter-spacing: .25px;
+display: inline-block;
+width: 150px;
+height: 80px;
+margin: 0 auto;
+text-align: center;
+margin-top: 10%;
+font-weight: 900;
+}
+
+
+.button:hover {
+background: #61718b;
+color: white;
+}
+
+
+
+
+
+.blue{
+color: blue;
+}
+
+.red{
+color: red;
+}
+
+
+
+
+
+/* part for the gameplay */
+
+
+.game{
+    display: flex;
+    padding: 80px;
+    margin: 20px auto;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.59), rgba(255, 255, 255, 0.59)) 50% 50%/calc(100% - 60px) calc(100% - 60px) no-repeat,
+                linear-gradient(300deg, #363275 0%, #bcf4b0 100%);
+    border-radius: 23px;
+    padding: 57px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 43px;
+    box-sizing: border-box;
+    height: 80vh;
+    width: 40vw;
+    align-items: center; 
+    justify-content: center;
+}
+
+
+
+.row0 >div{
+    border: 10px dotted;
+
+    border-radius: 50%;
+    border-width: 4px;
+ border-color: #b1edff;
+ margin-left: 4px;
+   
+
+
+}
+
+.row{
+margin: 0 auto;
+display: inline-block;
+padding: 1px;
+width: 100px;
+height: 100px;
+background-color: rgb(213, 238, 255);
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+box-sizing: border-box;
+}
+
+
+
+
+@media only screen and (max-width: 1800px) {
+    .row {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .row{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .row{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .row{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .row{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .row{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.unclickable {
+pointer-events: none;
+}
+
+.bluePlayer{
+background-color: blue;
+}
+
+.drop{
+border-radius: 50%;
+background-color: rgb(240, 248, 255);
+
+}
+
+.hidden{
+display: none;
+}
+
+.btnstyle{
+display: inline-block;
+width: 50px;
+height: 50px;
+margin: 0 auto;
+border-style: outset;
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+.intro_btn{
+border-radius: 24px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+color: #3c4043;
+fill: currentcolor;
+font-family: "Google Sans",Roboto,Arial,sans-serif;
+font-size: 14px;
+font-weight: 500;
+justify-content: center;
+letter-spacing: .25px;
+display: inline-block;
+width: 60px;
+height: 60px;
+margin: 0 auto;
+margin-top: 0px;
+text-align: center;
+padding: 10px;
+}
+
+
+
+.button2{
+    margin-top: 0px;
+}
+    
+h2{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+footer{
+    color: black;
+
+}
+
+
+
+.createdBy{
+    
+    display: inline-flex;
+    margin: 0 auto;
+    border-style: 3px solid red;
+    margin-top: -800px;
+  
+    
+}
+
+
+/* announce winner pop up window*/
+
+.popup{
+    position: absolute;
+    background-color: #83b2d6;
+    z-index: 1;
+    height: 500px;
+    width: 500px;
+    display: none;
+
+}
+
+
+.pop{
+    display: block;
+}
+
+
+
+</style>
+</head>
+
+
+
+<body>
+    <div class="intro" id="intropart">
+        <h2 class="gameName">PUISSANCE 3</h2>
+        <h3 class="gameName2">Enter your names</h3>
+        <h2> Player 1 :</h2>
+        <input type="text" id="name1">
+        <h2> Player 2 :</h2>
+        <input type="text" id="name2">
+        <button  class="button" id="inplay" onclick="start()"> PLAY</button>
+    </div>
+
+    
+
+
+
+
+    <div class="game hidden" id="maingame">
+        <div id="players" class="players">
+        <p id="t1" class="t1">Player 1</p>
+        <p id="vs" class="t1">vs</p>
+        <p id="t2" class="t1">Player 2</p>
+        </div>
+
+
+
+        
+        <div class="row0 unclickable" id="row0">
+            <div class="drop row" id="dr" onmouseover="oo(this)" onmouseout="ooo(this)" onclick="insert1(this)"></div>
+            <div class="drop row" id="dr" onmouseover="oo(this)" onmouseout="ooo(this)" onclick="insert2(this)"></div>
+            <div class="drop row" id="dr" onmouseover="oo(this)" onmouseout="ooo(this)" onclick="insert3(this)"></div>
+            <div class="drop row" id="dr" onmouseover="oo(this)" onmouseout="ooo(this)" onclick="insert4(this)"></div>
+            <div class="drop row" id="dr" onmouseover="oo(this)" onmouseout="ooo(this)" onclick="insert5(this)"></div>
+        </div>
+
+        <!-- pop up window-->
+        <div class="popup" id="popup">
+            <h1 id="announce"></h1>
+            <button id="playAgain"> Play again </button>
+        </div>
+       
+        <div class="row1 unclickable">
+            <div class="row" id="c1_5"></div>
+            <div class="row" id="c2_5"></div>
+            <div class="row" id="c3_5"></div>
+            <div class="row" id="c4_5"></div>
+            <div class="row" id="c5_5"></div>
+        </div>
+        <div class="row2 unclickable2">
+            <div class="row" id="c1_4"></div>
+            <div class="row" id="c2_4"></div>
+            <div class="row" id="c3_4"></div>
+            <div class="row" id="c4_4"></div>
+            <div class="row" id="c5_4"></div>
+        </div>
+        <div class="row3 unclickable">
+            <div class="row" id="c1_3"></div>
+            <div class="row" id="c2_3"></div>
+            <div class="row" id="c3_3"></div>
+            <div class="row" id="c4_3"></div>
+            <div class="row" id="c5_3"></div>
+        </div>
+        <div class="row4 unclickable">
+            <div class="row" id="c1_2"></div>
+            <div class="row" id="c2_2"></div>
+            <div class="row" id="c3_2"></div>
+            <div class="row" id="c4_2"></div>
+            <div class="row" id="c5_2"></div>
+        </div>
+        <div class="row5 unclickable" id="r5">
+            <div class="row" id="c1_1"></div>
+            <div class="row" id="c2_1"></div>
+            <div class="row" id="c3_1"></div>
+            <div class="row" id="c4_1"></div>
+            <div class="row" id="c5_1"></div>
+        </div>
+
+        <div class="popup">
+            <h1 id="announce"></h1>
+        </div>
+        
+
+        <h1 class="red hidden">Player 1 wins!!!</h1>
+        <h1 class="blue hidden">Player 2 wins!!!</h1>
+        
+        <button  class="button button2" id="playbtn" onclick="play()"> PLAY</button>
+</div>
+
+
+</body>
+
+<!-- <footer class="CreatedBy"> Created By </footer> -->
+
+</html>
