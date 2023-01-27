@@ -18,7 +18,6 @@ html{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-   
 }
 
 body{
@@ -29,6 +28,30 @@ body{
     flex-direction: center;
     align-items: center;
     }
+
+
+.players{
+    display: flex;
+    margin:  0 auto;
+    font-size: 30px;
+   font-family: 'Orbitron', sans-serif;
+   padding: 5px;
+   margin-bottom: -10px;
+ }
+
+
+ .t1{
+    padding: 10px;
+    margin-left: 10px;
+ }
+
+ .t1a{
+    color: red;
+ }
+
+ .t1b{
+    color: blue;
+ }
 
 .intro{
     display: flex;
@@ -111,6 +134,7 @@ height: 80px;
 margin: 0 auto;
 text-align: center;
 margin-top: 10%;
+
 font-weight: 900;
 }
 
@@ -150,7 +174,7 @@ color: red;
     padding: 57px;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 43px;
+ 
     box-sizing: border-box;
     height: 80vh;
     width: 40vw;
@@ -162,12 +186,13 @@ color: red;
 
 .row0 >div{
     border: 10px dotted;
-
     border-radius: 50%;
     border-width: 4px;
- border-color: #b1edff;
- margin-left: 4px;
-   
+    border-color: #b1edff;
+    margin-left: 4px;
+    margin-top: -20px;
+    padding: 0;
+    
 
 
 }
@@ -176,8 +201,8 @@ color: red;
 margin: 0 auto;
 display: inline-block;
 padding: 1px;
-width: 100px;
-height: 100px;
+width: 75px;
+height: 75px;
 background-color: rgb(213, 238, 255);
 margin-left: 10px;
 margin-right: 10px;
@@ -327,14 +352,61 @@ footer{
     height: 500px;
     width: 500px;
     display: none;
+    margin: 0 auto;
 
 }
 
 
 .pop{
     display: block;
+    
 }
 
+.insidePop{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: auto;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 25%;
+
+}
+.inin1{
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+}
+.inin2{
+    margin-top: 50px;
+    margin-left: 60px;
+}
+.button2{
+    height: 40px;
+    width: 100px;
+}
+
+.butt{
+    width: 80px;
+    height:30px;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
 
 
 </style>
@@ -360,9 +432,11 @@ footer{
 
     <div class="game hidden" id="maingame">
         <div id="players" class="players">
-        <p id="t1" class="t1">Player 1</p>
-        <p id="vs" class="t1">vs</p>
-        <p id="t2" class="t1">Player 2</p>
+        <p id="t1" class="t1 t1a">Player 1   </p> 
+        <br>
+        <p id="vs" class="t1"> vs</p> 
+        <br><br>
+        <p id="t2" class="t1 t1b"> Player 2</p>
         </div>
 
 
@@ -378,8 +452,10 @@ footer{
 
         <!-- pop up window-->
         <div class="popup" id="popup">
-            <h1 id="announce"></h1>
-            <button id="playAgain"> Play again </button>
+            <div class="insidePop">
+                <div class="inin1"><h1 id="announce"></h1></div>
+                <div class="inin2"><button id="playAgain" class="butt" onclick="location.reload()"> Play again </button></div>                
+            </div>
         </div>
        
         <div class="row1 unclickable">
