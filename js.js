@@ -107,23 +107,38 @@ function color(e){
 //it is called when match is made
 function ShowWinner(){
     let mes = document.getElementById("announce");
-    if (currentPlayer == "red"){
-        if(player1 !== null){
-            mes.innerText = `The winner is ${player1}`;
-        }
-        else{
-            mes.innerText = `Player 1 wins!`;
-        }
-        
+
+    player1 = document.getElementById("name1").value;
+    player2 = document.getElementById("name2").value;
+    let pl1 = false;
+    let pl2 = false;
+
+    if (player1.length > 0){
+       pl1 = true;
     }
-    if (currentPlayer == "blue"){
-        if(player2 !== null){
+    if (player2.length > 0){
+        pl2 = true;
+    }
+
+
+    if (currentPlayer == "red"){
+        if(pl1 == true){
             mes.innerText = `The winner is ${player2}`;
         }
         else{
             mes.innerText = `Player 2 wins!`;
         }
+        
     }
+    if (currentPlayer == "blue"){
+        if(pl2 == true){
+            mes.innerText = `The winner is ${player1}`;
+        }
+        else{
+            mes.innerText = `Player 1 wins!`;
+        }
+    }
+
     let pop = document.getElementById('popup');
      pop.classList.add("pop");
 }
